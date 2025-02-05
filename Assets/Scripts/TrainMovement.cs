@@ -1,25 +1,29 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TrainMovement : MonoBehaviour
 {
     [SerializeField, Header("----Train Amount----")]
     private GameObject train;
-
+    [SerializeField] private float trainRotSmoothness;
     [SerializeField] private float trainSpeed = 10f;
-    [SerializeField] private Transform path;
+    [SerializeField, Header("----Paths Variables----")]
+    private Transform path;
     [SerializeField] private Transform pathSwitch;
     private List<Transform> _paths = new List<Transform>();
     private List<Transform> _pathsSwitch = new List<Transform>();
     [SerializeField] private float distanceAmount = 0.1f;
-    [SerializeField] private float trainRotSmoothness;
-    private int _currentPath;
+    [Header("Boolean")]
+    public int currentPath;
     private bool _isPlay;
-    public bool _isPathSwitch;
+    public bool isPathSwitch;
+    public static TrainMovement Instance;
 
     private void Awake()
     {
+        Instance = this;
         if (path == null)
             return;
         _paths.Clear();
@@ -45,6 +49,7 @@ public class TrainMovement : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
         Movement();
@@ -53,43 +58,42 @@ public class TrainMovement : MonoBehaviour
 
     private void Movement()
     {
-        if (!_isPlay || _isPathSwitch) return;
-        if (_currentPath > _paths.Count - 1) return;
-        float distance = Vector3.Distance(train.transform.position, _paths[_currentPath].position);
+        if (!_isPlay || isPathSwitch) return;
+        if (currentPath > _paths.Count - 1) return;
+        float distance = Vector3.Distance(train.transform.position, _paths[currentPath].position);
         if (distance <= distanceAmount)
         {
-            _currentPath++;
+            currentPath++;
         }
         else
         {
             train.transform.position =
-                Vector3.MoveTowards(train.transform.position, _paths[_currentPath].position,
+                Vector3.MoveTowards(train.transform.position, _paths[currentPath].position,
                     Time.deltaTime * trainSpeed);
         }
     }
 
     private void PathSwitch()
     {
-        if (!_isPlay || !_isPathSwitch) return;
-        if (_currentPath > _pathsSwitch.Count - 1) return;
-        float distance = Vector3.Distance(train.transform.position, _pathsSwitch[_currentPath].position);
+        if (!_isPlay || !isPathSwitch || !TrainTrigger.IsSwitchable) return;
+        if (currentPath > _pathsSwitch.Count - 1) return;
+        float distance = Vector3.Distance(train.transform.position, _pathsSwitch[currentPath].position);
         if (distance <= distanceAmount)
         {
-            _currentPath++;
+            currentPath++;
         }
         else
         {
-            Vector3 dir = (_pathsSwitch[_currentPath].position - train.transform.position).normalized;
+            Vector3 dir = (_pathsSwitch[currentPath].position - train.transform.position).normalized;
             Quaternion lookRotation = Quaternion.LookRotation(dir);
             Quaternion offsetRotation = Quaternion.Euler(0, 90, 0);
             Quaternion correctedRotation = lookRotation * offsetRotation;
             train.transform.rotation = Quaternion.Slerp(train.transform.rotation, correctedRotation,
                 Time.deltaTime * trainRotSmoothness);
             train.transform.position =
-                Vector3.MoveTowards(train.transform.position, _pathsSwitch[_currentPath].position,
+                Vector3.MoveTowards(train.transform.position, _pathsSwitch[currentPath].position,
                     Time.deltaTime * trainSpeed);
         }
-      
     }
 
     public void MovementInteraction()
