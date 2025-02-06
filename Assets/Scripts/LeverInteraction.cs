@@ -25,8 +25,11 @@ public class LeverInteraction : MonoBehaviour
 
     private void OnMouseDown()
     {
+        _isLeverSwitch = !_isLeverSwitch;
+        if (!TrainTrigger.IsSwitchable) return;
         TrainMovement.Instance.isPathSwitch = !TrainMovement.Instance.isPathSwitch;
         TrainMovement.Instance.currentPath = 0;
-        _isLeverSwitch = !_isLeverSwitch;
+        
+
     }
 }

@@ -16,7 +16,6 @@ public class TrainTrigger : MonoBehaviour
         {
             Debug.LogWarning("Switch");
             IsSwitchable = false;
-            TrainMovement.Instance.isPathSwitch = false;
         }
     }
     

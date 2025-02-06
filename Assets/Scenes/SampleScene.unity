@@ -477,13 +477,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08128534, y: -0.9028798, z: 0.1964078, w: 0.37366417}
-  m_LocalPosition: {x: 1.408254, y: 3.1323242, z: 0.25522357}
+  m_LocalRotation: {x: -0.19355096, y: 0.63130045, z: -0.16713236, w: -0.73216426}
+  m_LocalPosition: {x: 0.74236596, y: 2.1025572, z: -1.6042191}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 25.233, y: -158.806, z: 0.017}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1312,8 +1312,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06699407, y: 0.50042987, z: 2.9182615}
-  m_Center: {x: -0.46650296, y: -0.8771653, z: -4.6186385}
+  m_Size: {x: 1.8033597, y: 0.50042987, z: 3.1173177}
+  m_Center: {x: 0.40167987, y: -0.8771653, z: -4.5191107}
 --- !u!4 &1286312759
 Transform:
   m_ObjectHideFlags: 0
@@ -1802,6 +1802,11 @@ MonoBehaviour:
   distanceAmount: 0.2
   currentPath: 0
   isPathSwitch: 0
+  duration: 1
+  strength: 2
+  vibrato: 5
+  randomness: 0
+  ease: 28
 --- !u!4 &1911815913
 Transform:
   m_ObjectHideFlags: 0
@@ -2063,6 +2068,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7790593083779020225}
+  - {fileID: 3912060956910130310}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!23 &1871336964177970297
@@ -2168,7 +2174,7 @@ GameObject:
   - component: {fileID: 4514954991014319015}
   - component: {fileID: 5863610700723542660}
   - component: {fileID: 5863610700723542662}
-  - component: {fileID: 5863610700723542661}
+  - component: {fileID: 5863610700723542663}
   m_Layer: 0
   m_Name: Levverr
   m_TagString: Untagged
@@ -2255,12 +2261,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2922003378609584964}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000461936, y: 0.0000011920929, z: 0.38268328, w: 0.9238797}
-  m_LocalPosition: {x: -1.2481903, y: 1.0000322, z: -1.0783395}
+  m_LocalRotation: {x: 0.27059722, y: 0.6532814, z: 0.27059868, w: 0.6532817}
+  m_LocalPosition: {x: -0.043339495, y: 0.02508843, z: 0.0011901781}
   m_LocalScale: {x: 100, y: 100, z: 100.000015}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 727618079787028844}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 45}
 --- !u!33 &4514954991014319015
 MeshFilter:
@@ -2391,8 +2397,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5863610700723542661
-BoxCollider:
+--- !u!114 &5863610700723542662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2922003378609584964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671624d0f151f1949b1515a0e24fd0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &5863610700723542663
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2406,24 +2424,14 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.006447343, y: 0.005680566, z: 0.0056284666}
-  m_Center: {x: -0.0003765694, y: 0.002687837, z: 0.00090662646}
---- !u!114 &5863610700723542662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2922003378609584964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 671624d0f151f1949b1515a0e24fd0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Radius: 0.002721377
+  m_Height: 0.0064373068
+  m_Direction: 1
+  m_Center: {x: 0.00003777917, y: 0.00086671644, z: 0.00039301126}
 --- !u!33 &5931878822101613355
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2683,4 +2691,3 @@ SceneRoots:
   - {fileID: 6593967692357595815}
   - {fileID: 1286312759}
   - {fileID: 727618079787028844}
-  - {fileID: 3912060956910130310}
