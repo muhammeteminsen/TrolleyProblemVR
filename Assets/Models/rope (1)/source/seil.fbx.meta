@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a9cfde98f221fa4093131e534a9bd2f
+guid: 009a8c75ed230a94c9b36d93d0f0c535
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: SkinMat
-    second: {fileID: 2100000, guid: 2d353371ffaf2b24aaab3c09dd19875d, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 2ce77c5fb3f538149a0eec6751486b06, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

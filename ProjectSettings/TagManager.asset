@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Switchable
   - UnSwitchable
+  - Enemy
+  - Train
   layers:
   - Default
   - TransparentFX

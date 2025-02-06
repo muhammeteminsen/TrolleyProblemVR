@@ -1,9 +1,16 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
 public class TrainTrigger : MonoBehaviour
 {
     public static bool IsSwitchable;
+    private Camera _camera;
+
+    private void Awake()
+    {
+        _camera = Camera.main;
+    }
 
     private void Start()
     {
@@ -18,6 +25,17 @@ public class TrainTrigger : MonoBehaviour
             IsSwitchable = false;
         }
     }
-    
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+            _camera.transform.DOShakePosition(.2f,.1f,fadeOut:true).OnComplete(() =>
+            {
+                _camera.transform.DOKill();
+                
+            });
+        }
+    }
 }

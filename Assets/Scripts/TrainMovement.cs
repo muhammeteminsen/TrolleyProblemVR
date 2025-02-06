@@ -10,7 +10,7 @@ public class TrainMovement : MonoBehaviour
 
     [SerializeField, Header("----Train Amount----")]
     private GameObject train;
-
+    
     [SerializeField] private float trainRotSmoothness;
     [SerializeField] private float trainSpeed = 10f;
 
@@ -24,8 +24,11 @@ public class TrainMovement : MonoBehaviour
     public int currentPath;
     [Header("----Boolean----")] private bool _isPlay;
     public bool isPathSwitch;
-    private bool _isTweenActive = false;
-    [SerializeField] private float duration, strength, vibrato, randomness;
+    [Header("----DoTween Amount----")] private bool _isTweenActive;
+    [SerializeField] private float duration;
+    [SerializeField] private float strength;
+    [SerializeField] private float vibrato;
+    [SerializeField] private float randomness;
     [SerializeField] private Ease ease;
 
     private void Awake()
@@ -64,10 +67,10 @@ public class TrainMovement : MonoBehaviour
             Movement();
             PathSwitch();
         }
-        
+
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -79,7 +82,7 @@ public class TrainMovement : MonoBehaviour
         if (distance <= distanceAmount)
         {
             currentPath++;
-            TrainAnimation();
+            StopTrainAnimation();
         }
         else
         {
@@ -97,7 +100,7 @@ public class TrainMovement : MonoBehaviour
         if (distance <= distanceAmount)
         {
             currentPath++;
-            TrainAnimation();
+            StopTrainAnimation();
         }
         else
         {
@@ -113,11 +116,22 @@ public class TrainMovement : MonoBehaviour
         }
     }
 
-    private void TrainAnimation()
+    private void StopTrainAnimation()
     {
-        
         if ((!isPathSwitch || currentPath != _pathsSwitch.Count) &&
             (isPathSwitch || currentPath != _paths.Count)) return;
+        _isTweenActive = true;
+        train.transform.DOShakeRotation(duration, strength, (int)vibrato, randomness)
+            .SetEase(ease)
+            .OnComplete(() =>
+            {
+                train.transform.DOKill();
+                _isTweenActive = false;
+            });
+    }
+
+    private void PauseTrainAnimation()
+    {
         _isTweenActive = true;
         train.transform.DOShakeRotation(duration, strength, (int)vibrato, randomness)
             .SetEase(ease)
@@ -131,5 +145,12 @@ public class TrainMovement : MonoBehaviour
     public void MovementInteraction()
     {
         _isPlay = true;
+    }
+
+    public void PauseTrain()
+    {
+        if (!_isPlay ) return;
+        PauseTrainAnimation();
+        _isPlay = false;
     }
 }
