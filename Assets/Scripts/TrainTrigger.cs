@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrainTrigger : MonoBehaviour
 {
     public static bool IsSwitchable;
+    [SerializeField] private GameObject dieObject;
     private Camera _camera;
 
     private void Awake()
@@ -30,11 +31,11 @@ public class TrainTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            Instantiate(dieObject, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
-            _camera.transform.DOShakePosition(.2f,.1f,fadeOut:true).OnComplete(() =>
+            _camera.transform.DOShakePosition(.2f, .1f, fadeOut: true).OnComplete(() =>
             {
                 _camera.transform.DOKill();
-                
             });
         }
     }
