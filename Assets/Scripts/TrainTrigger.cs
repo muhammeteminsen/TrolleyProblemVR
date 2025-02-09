@@ -1,11 +1,14 @@
-using System;
 using DG.Tweening;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class TrainTrigger : MonoBehaviour
 {
     public static bool IsSwitchable;
     [SerializeField] private GameObject dieObject;
+    [SerializeField] private GameObject destructionTrain;
+    [SerializeField] private ParticleSystem explosionVFX;
     private Camera _camera;
 
     private void Awake()
@@ -38,5 +41,33 @@ public class TrainTrigger : MonoBehaviour
                 _camera.transform.DOKill();
             });
         }
+
+        else if (other.gameObject.CompareTag("FatCharacter"))
+        {
+            if (destructionTrain != null)
+            {
+                GameObject destructionTrainInstantiate =
+                    Instantiate(destructionTrain, transform.position, transform.rotation);
+                Destroy(gameObject);
+                ApplyExplosion(other, destructionTrainInstantiate);
+            }
+        }
+    }
+
+    private Rigidbody[] _destructionTrainRb;
+    private void ApplyExplosion(Collider other, GameObject destructionTrainInstantiate)
+    {
+        if (destructionTrainInstantiate == null) return;
+        _destructionTrainRb = destructionTrainInstantiate.GetComponentsInChildren<Rigidbody>();
+        foreach (var t in _destructionTrainRb)
+        {
+            t.AddExplosionForce(Random.Range(-300, 300), other.transform.position, 10f);
+        }
+        _camera.transform.DOShakePosition(.1f, .1f, fadeOut: true).OnComplete(() =>
+        {
+            _camera.transform.DOKill();
+        });
+        ParticleSystem explosionInstantiate = Instantiate(explosionVFX, other.transform.position,Quaternion.identity);
+        Destroy(explosionInstantiate.gameObject,1.5f);
     }
 }

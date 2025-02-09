@@ -76,7 +76,7 @@ public class TrainMovement : MonoBehaviour
 
     private void Movement()
     {
-        if (!_isPlay || isPathSwitch) return;
+        if (!_isPlay || isPathSwitch || train== null) return;
         if (currentPath > _paths.Count - 1) return;
         float distance = Vector3.Distance(train.transform.position, _paths[currentPath].position);
         if (distance <= distanceAmount)
@@ -93,8 +93,8 @@ public class TrainMovement : MonoBehaviour
     }
 
     private void PathSwitch()
-    {
-        if (!_isPlay || !isPathSwitch) return;
+    { 
+        if (!_isPlay || !isPathSwitch || train== null) return;
         if (currentPath > _pathsSwitch.Count - 1) return;
         float distance = Vector3.Distance(train.transform.position, _pathsSwitch[currentPath].position);
         if (distance <= distanceAmount)

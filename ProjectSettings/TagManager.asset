@@ -8,6 +8,7 @@ TagManager:
   - UnSwitchable
   - Enemy
   - Train
+  - FatCharacter
   layers:
   - Default
   - TransparentFX
