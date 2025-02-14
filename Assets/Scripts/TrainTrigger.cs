@@ -46,10 +46,11 @@ public class TrainTrigger : MonoBehaviour
         {
             if (destructionTrain != null)
             {
-                GameObject destructionTrainInstantiate =
-                    Instantiate(destructionTrain, transform.position, transform.rotation);
-                Destroy(gameObject);
-                ApplyExplosion(other, destructionTrainInstantiate);
+                Debug.LogWarning("TriggerFatCharacter");
+                // GameObject destructionTrainInstantiate =
+                //     Instantiate(destructionTrain, transform.position, transform.rotation);
+                // Destroy(gameObject);
+                //ApplyExplosion(other, destructionTrainInstantiate);
             }
         }
     }

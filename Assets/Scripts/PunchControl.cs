@@ -20,6 +20,8 @@ public class PunchControl : MonoBehaviour
 
     public void PunchAnimationControl()
     {
-        _instance.RagdollOn(_enemyAnimator,enemy.transform.forward*5f);
+        Vector3 forcePosition =
+            new Vector3(enemy.transform.forward.x, enemy.transform.up.y, enemy.transform.position.z);
+        _instance.RagdollOn(_enemyAnimator,forcePosition*3f);
     }
 }
