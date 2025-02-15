@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 
 public class TrainMovement : MonoBehaviour
@@ -10,30 +11,29 @@ public class TrainMovement : MonoBehaviour
 
     [SerializeField, Header("----Train Amount----")]
     private GameObject train;
-    
+    private Transform _player;
     [SerializeField] private float trainRotSmoothness;
     [SerializeField] private float trainSpeed = 10f;
 
     [SerializeField, Header("----Paths Variables----")]
     private Transform path;
-
     [SerializeField] private Transform pathSwitch;
     private List<Transform> _paths = new List<Transform>();
     private List<Transform> _pathsSwitch = new List<Transform>();
     [SerializeField] private float distanceAmount = 0.1f;
     public int currentPath;
-    [Header("----Boolean----")] private bool _isPlay;
+    
+    [Header("----Boolean----")] 
+    public bool isPlay;
     public bool isPathSwitch;
-    [Header("----DoTween Amount----")] private bool _isTweenActive;
-    [SerializeField] private float duration;
-    [SerializeField] private float strength;
-    [SerializeField] private float vibrato;
-    [SerializeField] private float randomness;
-    [SerializeField] private Ease ease;
+    private bool _isTweenActive;
+    private DOTweenController _doTweenController; 
 
     private void Awake()
     {
         Instance = this;
+        _doTweenController = GetComponent<DOTweenController>();
+        _player = GameObject.FindWithTag("Player").transform;
         if (path == null)
             return;
         _paths.Clear();
@@ -76,7 +76,7 @@ public class TrainMovement : MonoBehaviour
 
     private void Movement()
     {
-        if (!_isPlay || isPathSwitch || train== null) return;
+        if (!isPlay || isPathSwitch || train == null) return;
         if (currentPath > _paths.Count - 1) return;
         float distance = Vector3.Distance(train.transform.position, _paths[currentPath].position);
         if (distance <= distanceAmount)
@@ -93,8 +93,8 @@ public class TrainMovement : MonoBehaviour
     }
 
     private void PathSwitch()
-    { 
-        if (!_isPlay || !isPathSwitch || train== null) return;
+    {
+        if (!isPlay || !isPathSwitch || train == null) return;
         if (currentPath > _pathsSwitch.Count - 1) return;
         float distance = Vector3.Distance(train.transform.position, _pathsSwitch[currentPath].position);
         if (distance <= distanceAmount)
@@ -120,37 +120,35 @@ public class TrainMovement : MonoBehaviour
     {
         if ((!isPathSwitch || currentPath != _pathsSwitch.Count) &&
             (isPathSwitch || currentPath != _paths.Count)) return;
-        _isTweenActive = true;
-        train.transform.DOShakeRotation(duration, strength, (int)vibrato, randomness)
-            .SetEase(ease)
-            .OnComplete(() =>
-            {
-                train.transform.DOKill();
-                _isTweenActive = false;
-            });
+        ApplyShakeRotation();
     }
 
     private void PauseTrainAnimation()
     {
-        _isTweenActive = true;
-        train.transform.DOShakeRotation(duration, strength, (int)vibrato, randomness)
-            .SetEase(ease)
-            .OnComplete(() =>
-            {
-                train.transform.DOKill();
-                _isTweenActive = false;
-            });
+        ApplyShakeRotation();
     }
 
+    private void ApplyShakeRotation()
+    {
+        _isTweenActive = true;
+        _doTweenController.GetShakeRotation(train.transform,
+            () => { _isTweenActive = false; });
+    }
+
+    public float GetPlayerToTrain()
+    {
+        return  train.transform.position.z - _player.position.z;
+    }
+    
     public void MovementInteraction()
     {
-        _isPlay = true;
+        isPlay = true;
     }
 
     public void PauseTrain()
     {
-        if (!_isPlay ) return;
+        if (!isPlay) return;
         PauseTrainAnimation();
-        _isPlay = false;
+        isPlay = false;
     }
 }

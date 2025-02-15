@@ -6232,8 +6232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dieObject: {fileID: 5646142337391378924, guid: 8be895b0b67806541867bbf039f9414e, type: 3}
-  destructionTrain: {fileID: 3671962943304595801, guid: 5102b5bcd1fe9d5418dcb01b0ad28d5d, type: 3}
-  explosionVFX: {fileID: 198175801688348628, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
+  doTweenController: {fileID: 1008243206}
 --- !u!65 &910646305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6253,8 +6252,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0308659, y: 0.43563366, z: 0.35251504}
-  m_Center: {x: 0.76888025, y: 0.044344544, z: -0.017375737}
+  m_Size: {x: 0.83776665, y: 0.43563366, z: 0.35251504}
+  m_Center: {x: 0.8654299, y: 0.044344544, z: -0.017375737}
 --- !u!4 &910646306
 Transform:
   m_ObjectHideFlags: 0
@@ -6592,6 +6591,7 @@ GameObject:
   - component: {fileID: 1008243203}
   - component: {fileID: 1008243202}
   - component: {fileID: 1008243205}
+  - component: {fileID: 1008243206}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6631,12 +6631,8 @@ MonoBehaviour:
   pathSwitch: {fileID: 0}
   distanceAmount: 0.1
   currentPath: 0
+  isPlay: 0
   isPathSwitch: 0
-  duration: 1
-  strength: 2
-  vibrato: 5
-  randomness: 0
-  ease: 28
 --- !u!4 &1008243204
 Transform:
   m_ObjectHideFlags: 0
@@ -6664,6 +6660,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e29e24612ab8341800d5437ce85e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1008243206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008243201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f405c1fb448a5a4e971665006ac63f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  strength: 6
+  vibrato: 5
+  randomness: 1
+  ease: 1
 --- !u!1 &1028278082
 GameObject:
   m_ObjectHideFlags: 0
@@ -14497,7 +14510,7 @@ GameObject:
   - component: {fileID: 5657468933696674101}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16306,6 +16319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8447214118212102265}
+  distanceAmount: 0.5
 --- !u!54 &5657468933696674102
 Rigidbody:
   m_ObjectHideFlags: 0
