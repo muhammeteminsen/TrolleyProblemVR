@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DOTweenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DOTweenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PunchControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PushControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PunchControl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PushControl.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrainExplosion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrainExplosion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrainMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrainMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrainTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrainTrigger.cs" afterDir="false" />
-    </list>
+    <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +98,7 @@
       <workItem from="1739106286670" duration="173000" />
       <workItem from="1739106480271" duration="11053000" />
       <workItem from="1739543058806" duration="4449000" />
-      <workItem from="1739620326096" duration="9770000" />
+      <workItem from="1739620326096" duration="10301000" />
     </task>
     <servers />
   </component>
