@@ -4,16 +4,21 @@ public class RagdollControl : MonoBehaviour
 {
     Collider[] _colliders;
     Rigidbody[] _rigidbodies;
-    public static RagdollControl Instance;
+    public static RagdollControl Instance { get; private set; }
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); 
+            return;
+        }
+
         Instance = this;
     }
 
     public void GetRagdoll(GameObject enemyRagdollRig)
     {
-        
         _colliders = enemyRagdollRig.GetComponentsInChildren<Collider>();
         _rigidbodies = enemyRagdollRig.GetComponentsInChildren<Rigidbody>();
     }
@@ -32,7 +37,7 @@ public class RagdollControl : MonoBehaviour
         }
     }
 
-    public void RagdollOn(Animator enemyAnimator,Vector3 force)
+    public void RagdollOn(Animator enemyAnimator, Vector3 force)
     {
         enemyAnimator.enabled = false;
         foreach (Collider ragdollCollider in _colliders)
@@ -43,7 +48,7 @@ public class RagdollControl : MonoBehaviour
         foreach (Rigidbody ragdollRigidbody in _rigidbodies)
         {
             ragdollRigidbody.isKinematic = false;
-            ragdollRigidbody.AddForce(force,ForceMode.Impulse);
+            ragdollRigidbody.AddForce(force, ForceMode.Impulse);
         }
     }
 }

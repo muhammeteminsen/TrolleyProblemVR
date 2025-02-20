@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
+
 
 
 public class TrainMovement : MonoBehaviour
@@ -24,8 +23,8 @@ public class TrainMovement : MonoBehaviour
     public int currentPath;
     
     [Header("----Boolean----")] 
-    public bool isPlay;
-    public bool isPathSwitch;
+    public bool isPlay { get; set; }
+    public bool isPathSwitch { get; set; }
     private bool _isTweenActive;
     private DOTweenController _doTweenController; 
 

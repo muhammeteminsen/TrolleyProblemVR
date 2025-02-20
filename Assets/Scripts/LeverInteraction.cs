@@ -23,13 +23,18 @@ public class LeverInteraction : MonoBehaviour
                 : Quaternion.Euler(_defaultRot.x, _defaultRot.y, -90), Time.deltaTime * 5f);
     }
 
+    public Quaternion GetLeverRotate(ref float duration)
+    {
+        _isLeverSwitch = true;
+        return transform.rotation =
+            Quaternion.Lerp(transform.rotation, Quaternion.Euler(_defaultRot.x, _defaultRot.y, -90),duration);
+    }
+
     private void OnMouseDown()
     {
         _isLeverSwitch = !_isLeverSwitch;
         if (!TrainTrigger.IsSwitchable) return;
         TrainMovement.Instance.isPathSwitch = !TrainMovement.Instance.isPathSwitch;
         TrainMovement.Instance.currentPath = 0;
-        
-
     }
 }
