@@ -6,20 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/hypercasual-rigged-character/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/hypercasual-rigged-character/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/scripts/NewMonoBehaviourScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/scripts/NewMonoBehaviourScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeverInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeverInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PushControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PushControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RagdollControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RagdollControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrainMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrainMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/yol.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/yol.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
