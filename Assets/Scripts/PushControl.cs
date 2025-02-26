@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PushControl : MonoBehaviour
 {
@@ -20,9 +22,8 @@ public class PushControl : MonoBehaviour
         _enemyAnimator = enemy.GetComponent<Animator>();
         _instance.GetRagdoll(enemy);
         _instance.RagdollOff(_enemyAnimator);
-        _isPush = false;
+        _isPush = false;    
     }
-
     
 
     private void OnMouseDown()
@@ -36,7 +37,6 @@ public class PushControl : MonoBehaviour
         {
             GetComponent<Animator>().SetTrigger(IsPush);
         }
-        
         _isPush = true;
     }
 
@@ -73,5 +73,9 @@ public class PushControl : MonoBehaviour
         if (enemy==null) yield return null;
         _instance.RagdollOn(_enemyAnimator,enemy.transform.forward*7f);
         _coroutineRun = false;
+        if (SceneManager.GetActiveScene().buildIndex == 3 && TrainTrigger.IsSwitchable)
+        {
+            TrainMovement.Instance.isPathSwitch = true;
+        }
     } 
 }

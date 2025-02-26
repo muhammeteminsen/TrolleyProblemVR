@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 public class TrainMovement : MonoBehaviour
 {
     public static TrainMovement Instance;

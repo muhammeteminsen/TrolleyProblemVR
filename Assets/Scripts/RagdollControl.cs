@@ -10,10 +10,9 @@ public class RagdollControl : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
             return;
         }
-
         Instance = this;
     }
 
