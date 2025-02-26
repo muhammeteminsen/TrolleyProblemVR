@@ -15137,7 +15137,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.7, y: 0.92194957, z: -3.31}
-  m_LocalScale: {x: 1.4247167, y: 0.07217196, z: 9.730949}
+  m_LocalScale: {x: 4.316749, y: 0.07217196, z: 20.256918}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -21623,7 +21623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c6f567d6122d419d34aaa488e6125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieObject: {fileID: 5646142337391378924, guid: 8be895b0b67806541867bbf039f9414e, type: 3}
   doTweenController: {fileID: 0}
 --- !u!23 &8242348209615676289
 MeshRenderer:
