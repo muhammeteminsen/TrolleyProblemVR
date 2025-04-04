@@ -4,11 +4,13 @@ using UnityEngine;
 public class PathController : MonoBehaviour
 {
     [SerializeField] private Transform path;
-    [SerializeField] private Transform pathSwitch;
+    public Transform pathSwitch;
     private List<Transform> _pathPoints = new List<Transform>();
     private List<Transform> _pathSwitchPoints = new List<Transform>();
+    private GameStateManager _gameStateManager;
     private void Awake()
     {
+        _gameStateManager = GetComponent<GameStateManager>();
         if (path == null) return;
         foreach (Transform child in path)
         {
@@ -28,14 +30,12 @@ public class PathController : MonoBehaviour
     }
     public Vector3 GetPathSwitchPoints(ref int currentIndex)
     {
-        if (currentIndex >= _pathSwitchPoints.Count) return Vector3.zero;
-        var pathSwitchPoint = _pathSwitchPoints[currentIndex].position;
-        return pathSwitchPoint;
+        if (currentIndex >= _pathSwitchPoints.Count || currentIndex < 0 )
+        {
+            Vector3 lastPoint =  _pathSwitchPoints[^1].position;
+           _gameStateManager.ChangeState(new PauseState());
+            return lastPoint;
+        }
+        return _pathSwitchPoints[currentIndex].position;
     }
-   
-    public float GetDistanceToTrain(GameObject train)
-    {
-        return Vector3.Distance(train.transform.position, GetPathPoints());
-    }
-    
 }   

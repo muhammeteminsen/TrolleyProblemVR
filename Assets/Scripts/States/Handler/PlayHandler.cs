@@ -7,7 +7,6 @@ public class PlayHandler : MonoBehaviour
     [SerializeField] private float movementSpeed = 4f;
     private PathController _pathController;
     private int _currentIndex;
-    private bool _hasPaused;
 
     private void Awake()
     {
@@ -19,11 +18,10 @@ public class PlayHandler : MonoBehaviour
         TowardsUnSwitch(state);
     }
 
-    public void ExitUnSwitch(GameStateManager state)
+    private void ExitPlay(GameStateManager state)
     {
         train.transform.DOShakeRotation(.2f, 1f, 1, 5f).OnComplete(() =>
         {
-            _hasPaused = true;
             state.ChangeState(new PauseState());
         });
     }
@@ -35,20 +33,19 @@ public class PlayHandler : MonoBehaviour
 
     private void TowardsUnSwitch(GameStateManager state)
     {
-        _hasPaused = false;
-        if (_hasPaused) return;
         train.transform.position = Vector3.MoveTowards(train.transform.position,
             _pathController.GetPathPoints(), Time.deltaTime * movementSpeed);
         if (Vector3.Distance(train.transform.position, _pathController.GetPathPoints()) >= 0.1f) return;
-        ExitUnSwitch(state);
+        ExitPlay(state);
     }
 
     private void TowardsSwitch()
     {
         train.transform.position = Vector3.MoveTowards(train.transform.position,
-            _pathController.GetPathPoints(), Time.deltaTime * movementSpeed);
-        train.transform.rotation = Quaternion.RotateTowards(train.transform.rotation,
-            Quaternion.Euler(0, 0, 0), Time.deltaTime * movementSpeed);
+            _pathController.GetPathSwitchPoints(ref _currentIndex), Time.deltaTime * movementSpeed);
+        Vector3 dir = _pathController.GetPathSwitchPoints(ref _currentIndex) - train.transform.position;
+        train.transform.rotation = Quaternion.Lerp(train.transform.rotation,
+            Quaternion.LookRotation(dir) * Quaternion.Euler(0, 90, 0), Time.deltaTime * 5f);
         if (Vector3.Distance(train.transform.position, _pathController.GetPathSwitchPoints(ref _currentIndex )) >= 0.1f) return;
         _currentIndex++;
     }

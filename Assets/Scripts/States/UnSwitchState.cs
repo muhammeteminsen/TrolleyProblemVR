@@ -12,6 +12,6 @@ public class UnSwitchState : GameState
 
     public override void ExitState(GameStateManager state)
     {
-        state.playHandler?.ExitUnSwitch(state);  
+        
     }
 }

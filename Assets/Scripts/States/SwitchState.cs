@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class SwitchState : GameState
 {
     public override void EnterState(GameStateManager state)
