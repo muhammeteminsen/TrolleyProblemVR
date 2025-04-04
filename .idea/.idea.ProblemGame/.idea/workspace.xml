@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus/Interaction/Editor/AutoWiring/UnityObjectAddedBroadcaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/Interaction/Editor/AutoWiring/UnityObjectAddedBroadcaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus/Interaction/Samples/Scripts/AudioPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/Interaction/Samples/Scripts/AudioPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus/Interaction/Samples/Scripts/RespawnOnDrop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/Interaction/Samples/Scripts/RespawnOnDrop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus/Interaction/Samples/Scripts/UseGrabPressure/PressureBreakable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/Interaction/Samples/Scripts/UseGrabPressure/PressureBreakable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Prefabs/XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Prefabs/XR Origin (XR Rig).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.8/XR Device Simulator/XR Device Simulator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.8/XR Device Simulator/XR Device Simulator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeverController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeverController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathController.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +114,7 @@
       <workItem from="1743686548282" duration="8110000" />
       <workItem from="1743716302003" duration="8977000" />
       <workItem from="1743766183028" duration="15219000" />
-      <workItem from="1743792332732" duration="5117000" />
+      <workItem from="1743792332732" duration="5234000" />
     </task>
     <servers />
   </component>
