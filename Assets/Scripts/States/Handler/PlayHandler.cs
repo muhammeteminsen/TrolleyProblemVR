@@ -35,8 +35,8 @@ public class PlayHandler : MonoBehaviour
 
     private void TowardsUnSwitch(GameStateManager state)
     {
-        if (_hasPaused) return;
         _hasPaused = false;
+        if (_hasPaused) return;
         train.transform.position = Vector3.MoveTowards(train.transform.position,
             _pathController.GetPathPoints(), Time.deltaTime * movementSpeed);
         if (Vector3.Distance(train.transform.position, _pathController.GetPathPoints()) >= 0.1f) return;
