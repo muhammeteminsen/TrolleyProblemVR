@@ -11,7 +11,7 @@ public class LeverController : MonoBehaviour, IPullable
         if (stateManager.currentState is not UnSwitchState) return;
         stateManager.ChangeState(new SwitchState());
         StartCoroutine(SmartRotation());
-        stateManager.hasSwitched = true;
+        stateManager.hasInteraction = true;
     }
     private IEnumerator SmartRotation()
     {

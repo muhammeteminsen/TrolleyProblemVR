@@ -10,7 +10,7 @@ public class UIManagement : MonoBehaviour
 
     public void Play()
     {
-        if (_gameStateManager.hasSwitched)return;
+        if (_gameStateManager.hasInteraction)return;
         switch (_gameStateManager.currentState)
         {
             case SwitchState:

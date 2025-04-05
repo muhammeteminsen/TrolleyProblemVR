@@ -6,7 +6,7 @@ public class GameStateManager : MonoBehaviour
     public PlayHandler playHandler { get; private set; }
     public PauseHandler pauseHandler { get; set; }
     
-    public bool hasSwitched { get; set; }
+    public bool hasInteraction { get; set; }
     private void Awake()
     {
         ChangeState(new PauseState());
@@ -17,7 +17,6 @@ public class GameStateManager : MonoBehaviour
     private void Update()
     {
         currentState?.UpdateState(this);
-        Debug.Log(currentState);
     }
 
     public void ChangeState(GameState newState)
