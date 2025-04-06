@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    public GameState currentState { get; private set; }
+    public GameState currentState { get; set; }
     public PlayHandler playHandler { get; private set; }
     public bool hasInteraction { get; set; }
+    public bool hasPulled { get; set; }
     
     private void Awake()
     {
@@ -24,4 +25,18 @@ public class GameStateManager : MonoBehaviour
         currentState = newState;
         currentState.EnterState(this);
     }
+
+    public void GetPulledInteraction()
+    {
+        switch (hasPulled)
+        {
+            case true:
+                ChangeState(new SwitchState());
+                break;
+            default:
+                ChangeState(new UnSwitchState());
+                break;
+        }
+    }
+    
 }

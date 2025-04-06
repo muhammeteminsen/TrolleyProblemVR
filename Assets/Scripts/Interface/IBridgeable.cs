@@ -1,4 +1,4 @@
 public interface IBridgeable
 {
-    void OpenBridge();
+    void Open();
 }

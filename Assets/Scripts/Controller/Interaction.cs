@@ -25,11 +25,11 @@ public class Interaction : MonoBehaviour
 
     private void HandleInteraction()
     {
-        if (/*OVRInput.GetDown(OVRInput.Button.Two) ||*/ Keyboard.current[Key.B].wasPressedThisFrame)
+        if (OVRInput.GetDown(OVRInput.Button.Two) || Keyboard.current[Key.B].wasPressedThisFrame)
         {
             _pullable?.Pull(_gameStateManager, _pathController);
             _pushable?.Push();
-            _bridgeable?.OpenBridge();
+            _bridgeable?.Open();
         }
     }
 }

@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="" />
+    <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BridgeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BridgeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/DistanceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/DistanceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Interaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interface/IBridgeable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IBridgeable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/Handler/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/Handler/GameStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/Handler/PlayHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/Handler/PlayHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManagement.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,6 +138,7 @@
       <workItem from="1743938878014" duration="760000" />
       <workItem from="1743940628374" duration="1965000" />
       <workItem from="1743942865357" duration="7207000" />
+      <workItem from="1743969518973" duration="10329000" />
     </task>
     <servers />
   </component>

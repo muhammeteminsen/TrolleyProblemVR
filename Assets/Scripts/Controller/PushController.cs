@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PushController : DistanceController, IPushable
@@ -14,12 +13,6 @@ public class PushController : DistanceController, IPushable
         RagdollController.Instance.GetRagdoll(pushableObject);
         RagdollController.Instance.RagdollOff(_pushableAnimator);
     }
-
-    private void Update()
-    {
-        Debug.LogWarning(Distance(pushableObject.transform.position.z));
-    }
-
     public void Push()
     {
         if(pushableObject == null) return;
