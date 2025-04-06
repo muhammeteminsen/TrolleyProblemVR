@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Prefabs/XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Prefabs/XR Origin (XR Rig).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Interaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/GameStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/Handler/PauseHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/Handler/PauseHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/Handler/PlayHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/Handler/PlayHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/PauseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/PauseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrainTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrainTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +122,7 @@
       <workItem from="1743860786619" duration="6336000" />
       <workItem from="1743938878014" duration="760000" />
       <workItem from="1743940628374" duration="1965000" />
-      <workItem from="1743942865357" duration="7029000" />
+      <workItem from="1743942865357" duration="7207000" />
     </task>
     <servers />
   </component>
