@@ -1,15 +1,15 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class PlayHandler : MonoBehaviour
+public class PlayHandler : DistanceController
 {
-    public GameObject train;
     [SerializeField] private float movementSpeed = 4f;
     private PathController _pathController;
     private int _currentIndex;
-
-    private void Awake()
+    
+    protected override void Start()
     {
+        base.Start();
         _pathController = GetComponent<PathController>();
     }
 
@@ -18,9 +18,9 @@ public class PlayHandler : MonoBehaviour
         TowardsUnSwitch(state);
     }
 
-    private void ExitPlay(GameStateManager state)
+    public void ExitPlay(GameStateManager state)
     {
-        train.transform.DOShakeRotation(.2f, 1f, 1, 5f).OnComplete(() =>
+        Train.transform.DOShakeRotation(.2f, 1f, 1, 5f).OnComplete(() =>
         {
             state.ChangeState(new PauseState());
         });
@@ -33,20 +33,22 @@ public class PlayHandler : MonoBehaviour
 
     private void TowardsUnSwitch(GameStateManager state)
     {
-        train.transform.position = Vector3.MoveTowards(train.transform.position,
+        Train.transform.position = Vector3.MoveTowards(Train.transform.position,
             _pathController.GetPathPoints(), Time.deltaTime * movementSpeed);
-        if (Vector3.Distance(train.transform.position, _pathController.GetPathPoints()) >= 0.1f) return;
+        if (Vector3.Distance(Train.transform.position, _pathController.GetPathPoints()) >= 0.1f) return;
         ExitPlay(state);
+        state.hasInteraction = true;
     }
 
     private void TowardsSwitch()
     {
-        train.transform.position = Vector3.MoveTowards(train.transform.position,
+        if (Distance(_pathController.GetPathPoints().z) <= distanceThreshold) return;
+        Train.transform.position = Vector3.MoveTowards(Train.transform.position,
             _pathController.GetPathSwitchPoints(ref _currentIndex), Time.deltaTime * movementSpeed);
-        Vector3 dir = _pathController.GetPathSwitchPoints(ref _currentIndex) - train.transform.position;
-        train.transform.rotation = Quaternion.Lerp(train.transform.rotation,
+        Vector3 dir = _pathController.GetPathSwitchPoints(ref _currentIndex) - Train.transform.position;
+        Train.transform.rotation = Quaternion.Lerp(Train.transform.rotation,
             Quaternion.LookRotation(dir) * Quaternion.Euler(0, 90, 0), Time.deltaTime * 5f);
-        if (Vector3.Distance(train.transform.position, _pathController.GetPathSwitchPoints(ref _currentIndex )) >= 0.1f) return;
+        if (Vector3.Distance(Train.transform.position, _pathController.GetPathSwitchPoints(ref _currentIndex )) >= 0.1f) return;
         _currentIndex++;
     }
     

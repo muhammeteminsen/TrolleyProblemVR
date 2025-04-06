@@ -5,7 +5,7 @@ public class TrainTrigger : MonoBehaviour
 {
     private Camera _camera;
     private GameStateManager _gameStateManager;
-    private void Awake()
+    private void Start()
     {
         _camera = Camera.main;
         _gameStateManager = FindAnyObjectByType<GameStateManager>();
@@ -16,8 +16,9 @@ public class TrainTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
-            _camera.DOKill();
-            _camera.transform.DOShakePosition(.2f, .1f, fadeOut: true);
+            _camera.transform.DOKill();
+            Transform targetToShake = _camera.transform.parent ?? _camera.transform;
+            targetToShake.transform.parent.DOShakePosition(.2f, .1f, fadeOut: true);
         }
         else if (other.gameObject.CompareTag("FatCharacter"))
         {

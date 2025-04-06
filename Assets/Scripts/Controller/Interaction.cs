@@ -7,6 +7,7 @@ public class Interaction : MonoBehaviour
     private PathController _pathController;
     private IPullable _pullable;
     private IPushable _pushable;
+    private IBridgeable _bridgeable;
 
     private void Awake()
     {
@@ -14,6 +15,7 @@ public class Interaction : MonoBehaviour
         _pathController = GetComponent<PathController>();
         _pullable = GetComponent<IPullable>();
         _pushable = GetComponent<IPushable>();
+        _bridgeable = GetComponent<IBridgeable>();
     }
 
     private void Update()
@@ -27,6 +29,7 @@ public class Interaction : MonoBehaviour
         {
             _pullable?.Pull(_gameStateManager, _pathController);
             _pushable?.Push();
+            _bridgeable?.OpenBridge();
         }
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 public class LeverController : MonoBehaviour, IPullable
 {
     [SerializeField] private Transform lever;
-   
+    
+
     public void Pull(GameStateManager stateManager, PathController pathController)
     {
         if (pathController.pathSwitch == null) return;
