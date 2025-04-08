@@ -2,20 +2,9 @@ using UnityEngine;
 
 public class RagdollController : MonoBehaviour
 {
-    Collider[] _colliders;
-    Rigidbody[] _rigidbodies;
-    public static RagdollController Instance { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
-
+    private Collider[] _colliders;
+    private Rigidbody[] _rigidbodies;
+    
     public void GetRagdoll(GameObject enemyRagdollRig)
     {
         _colliders = enemyRagdollRig.GetComponentsInChildren<Collider>();

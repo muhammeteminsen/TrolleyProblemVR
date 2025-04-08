@@ -5,20 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac6a124-18ac-4928-acd0-958e6c59e456" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/ControllerBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProblemGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BridgeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BridgeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/DistanceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/DistanceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Interaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interface/IBridgeable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IBridgeable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/Handler/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/Handler/GameStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/Handler/PlayHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/Handler/PlayHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BridgeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Chapter3Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BridgeController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Chapter3Controller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/DistanceController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/DistanceController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/ControllerBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Chapter1Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Chapter1Controller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Chapter2Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Chapter2Controller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RagdollController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RagdollController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManagement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayManagement.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/f7/4ba0d1bd/ShortcutExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84f0d810adef4e6c8deab33e4ae93f7c1dec00/42/d9a31419/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/BridgeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/DistanceController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/DistanceBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/LeverController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/PushController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/RagdollController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -139,6 +140,7 @@
       <workItem from="1743940628374" duration="1965000" />
       <workItem from="1743942865357" duration="7207000" />
       <workItem from="1743969518973" duration="10329000" />
+      <workItem from="1744122653658" duration="10073000" />
     </task>
     <servers />
   </component>
