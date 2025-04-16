@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Interaction : MonoBehaviour
 {
@@ -9,6 +8,7 @@ public class Interaction : MonoBehaviour
     private IPushable _pushable;
     private IBridgeable _bridgeable;
 
+
     private void Awake()
     {
         _gameStateManager = GetComponent<GameStateManager>();
@@ -17,19 +17,11 @@ public class Interaction : MonoBehaviour
         _pushable = GetComponent<IPushable>();
         _bridgeable = GetComponent<IBridgeable>();
     }
-
-    private void Update()
+    
+    public void HandleInteraction()
     {
-        HandleInteraction();
-    }
-
-    private void HandleInteraction()
-    {
-        if (OVRInput.GetDown(OVRInput.Button.Two) || Keyboard.current[Key.B].wasPressedThisFrame)
-        {
-            _pullable?.Pull(_gameStateManager, _pathController);
-            _pushable?.Push();
-            _bridgeable?.Open();
-        }
+        _pullable?.Pull(_gameStateManager, _pathController);
+        _pushable?.Push();
+        _bridgeable?.Open();
     }
 }
