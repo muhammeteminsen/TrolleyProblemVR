@@ -3335,11 +3335,5 @@
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "XR",
-            "bindingGroup": "XR",
-            "devices": []
-        }
-    ]
+    "controlSchemes": []
 }

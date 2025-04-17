@@ -6,6 +6,7 @@ public class InputHandler : MonoBehaviour
 {
     private PlayerInput _playerInput;
     private Interaction _interaction;
+    
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class InputHandler : MonoBehaviour
         if (context.ReadValueAsButton())
         {
             Debug.Log("Grip Button Right Pressed");
+            _interaction.LoadMainMenu();
             _playerInput.XRRight.Grip.performed-= OnGripButtonRight;
         }
     }
@@ -34,6 +36,7 @@ public class InputHandler : MonoBehaviour
         if (context.ReadValueAsButton())
         {
             Debug.Log("Grip Button Left Pressed");
+            _interaction.LoadActiveScene();
             _playerInput.XRLeft.Grip.performed-= OnGripButtonLeft;
         }
     }
@@ -62,7 +65,6 @@ public class InputHandler : MonoBehaviour
         {
             _interaction.HandleInteraction();
             Debug.Log("Primary Button Left Pressed");
-            _playerInput.XRLeft.Primary.performed-= OnPrimaryButtonLeft;
         }
     }
 

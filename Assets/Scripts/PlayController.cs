@@ -17,7 +17,7 @@ public class PlayController : MonoBehaviour
         Pause();
     }
 
-    public void Play()
+    private void Play()
     {
         if (_inputHandler.InteractSecondaryButtonLeft())
         {
@@ -29,7 +29,7 @@ public class PlayController : MonoBehaviour
       
     }
 
-    public void Pause()
+    private void Pause()
     {
         if (_inputHandler.InteractSecondaryButtonRight())
         {

@@ -16,8 +16,6 @@ public class Chapter1Controller : ControllerBase, IPullable
         if (pathController.pathSwitch == null) return;
         stateManager.hasPulled = !stateManager.hasPulled;
         StartCoroutine(SmartRotation(stateManager));
-        if (stateManager.currentState != new PauseState()) return;
-        stateManager.GetPulledInteraction();
     }
 
     private IEnumerator SmartRotation(GameStateManager stateManager)

@@ -20,6 +20,7 @@ public class Chapter4Controller : ControllerBase, IBridgeable, IPullable
 
     public void Open()
     {
+        if (IsPushed)return;
         if (bridgeDoor == null) return;
         StartCoroutine(SmartPush());
         IsPushed = true;
@@ -31,8 +32,6 @@ public class Chapter4Controller : ControllerBase, IBridgeable, IPullable
         if (pathController.pathSwitch == null) return;
         stateManager.hasPulled = !stateManager.hasPulled;
         StartCoroutine(SmartRotation(stateManager));
-        if (stateManager.currentState != new PauseState()) return;
-        stateManager.GetPulledInteraction();
     }
 
     private IEnumerator SmartRotation(GameStateManager stateManager)

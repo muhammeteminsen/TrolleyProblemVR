@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interaction : MonoBehaviour
 {
@@ -23,5 +24,15 @@ public class Interaction : MonoBehaviour
         _pullable?.Pull(_gameStateManager, _pathController);
         _pushable?.Push();
         _bridgeable?.Open();
+    }
+
+    public void LoadActiveScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("SelectScene"); 
     }
 }

@@ -14,9 +14,9 @@ public class Chapter2Controller : ControllerBase, IPushable
     }
     public void Push()
     {
+        if (IsPushed) return;
         if(pushableObject == null) return;
         if (Distance(pushableObject.transform.position.z) <= distanceThreshold) return;
-        if (IsPushed) return;
         Vector3 newPushPosition = new Vector3(0, Vector3.up.y, Vector3.back.z) * 10f;
         Ragdoll?.RagdollOn(_pushableAnimator, newPushPosition);
         IsPushed = true;
