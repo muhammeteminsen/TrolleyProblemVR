@@ -86,7 +86,6 @@ public class InputHandler : MonoBehaviour
 
     public bool InteractSecondaryButtonLeft()
     {
-        Debug.Log("InteractSecondaryButtonLeft");
         return _playerInput.XRLeft.Secondary.ReadValue<float>() > 0.5f;
     }
     public bool InteractGripButtonLeft()
@@ -103,7 +102,6 @@ public class InputHandler : MonoBehaviour
 
     public bool InteractSecondaryButtonRight()
     {
-        Debug.Log("InteractSecondaryButtonRight");
         return _playerInput.XRRight.Secondary.ReadValue<float>() > 0.5f;
     }
     public bool InteractGripButtonRight()

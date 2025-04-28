@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    public GameState currentState { get; set; }
+    public GameState currentState { get; private set; }
     public PlayHandler playHandler { get; private set; }
     public bool hasInteraction { get; set; }
     public bool hasPulled { get; set; }
@@ -16,7 +16,7 @@ public class GameStateManager : MonoBehaviour
     private void Update()
     {
         currentState?.UpdateState(this);
-    }
+    }   
 
     public void ChangeState(GameState newState)
     {

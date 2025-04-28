@@ -12,10 +12,12 @@ public class Chapter1Controller : ControllerBase, IPullable
 
     public void Pull(GameStateManager stateManager, PathController pathController)
     {
-        if (Distance(pathController.GetPathPoints().z) <= distanceThreshold) return;
         if (pathController.pathSwitch == null) return;
+        if (Distance(pathController.GetPathPoints().z) <= distanceThreshold) return;
         stateManager.hasPulled = !stateManager.hasPulled;
         StartCoroutine(SmartRotation(stateManager));
+        if (stateManager.currentState is PauseState) return;
+        stateManager.GetPulledInteraction();
     }
 
     private IEnumerator SmartRotation(GameStateManager stateManager)

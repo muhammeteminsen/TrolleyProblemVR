@@ -37,7 +37,6 @@ public class PlayHandler : MonoBehaviour
             _pathController.GetPathPoints(), Time.deltaTime * movementSpeed);
         if (Vector3.Distance(train.transform.position, _pathController.GetPathPoints()) >= 0.1f) return;
         ExitPlay(state);
-        state.hasInteraction = true;
     }
 
     private void TowardsSwitch()

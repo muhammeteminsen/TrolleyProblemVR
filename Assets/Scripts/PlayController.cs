@@ -21,21 +21,15 @@ public class PlayController : MonoBehaviour
     {
         if (_inputHandler.InteractSecondaryButtonLeft())
         {
-            Debug.Log("Play");
-            if (_gameStateManager.hasInteraction) return;
             _gameStateManager.GetPulledInteraction();
         }
-       
-      
     }
 
     private void Pause()
     {
         if (_inputHandler.InteractSecondaryButtonRight())
         {
-            Debug.Log("Pause");
             _gameStateManager.ChangeState(new PauseState());
         }
-        
     }
 }
