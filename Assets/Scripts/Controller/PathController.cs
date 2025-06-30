@@ -5,8 +5,8 @@ public class PathController : MonoBehaviour
 {
     [SerializeField] private Transform path;
     public Transform pathSwitch;
-    private List<Transform> _pathPoints = new List<Transform>();
-    private List<Transform> _pathSwitchPoints = new List<Transform>();
+    public List<Transform> pathPoints = new List<Transform>();
+    public List<Transform> pathSwitchPoints = new List<Transform>();
     private GameStateManager _gameStateManager;
     private void Awake()
     {
@@ -14,28 +14,28 @@ public class PathController : MonoBehaviour
         if (path == null) return;
         foreach (Transform child in path)
         {
-            _pathPoints.Add(child);
+            pathPoints.Add(child);
         }
 
         if (pathSwitch == null) return;
         foreach (Transform child in pathSwitch)
         {
-            _pathSwitchPoints.Add(child);
+            pathSwitchPoints.Add(child);
         }
     }
     
     public Vector3 GetPathPoints()
     {
-        return _pathPoints[^1].position;
+        return pathPoints[^1].position;
     }
     public Vector3 GetPathSwitchPoints(ref int currentIndex)
     {
-        if (currentIndex >= _pathSwitchPoints.Count || currentIndex < 0 )
+        if (currentIndex >= pathSwitchPoints.Count || currentIndex < 0 )
         {
-            Vector3 lastPoint =  _pathSwitchPoints[^1].position;
+            Vector3 lastPoint =  pathSwitchPoints[^1].position;
            _gameStateManager.ChangeState(new PauseState());
             return lastPoint;
         }
-        return _pathSwitchPoints[currentIndex].position;
+        return pathSwitchPoints[currentIndex].position;
     }
 }   

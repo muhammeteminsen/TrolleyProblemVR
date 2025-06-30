@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Switchable
-  - UnSwitchable
   - Enemy
   - Train
   - FatCharacter
+  - TutorialPanel
   layers:
   - Default
   - TransparentFX

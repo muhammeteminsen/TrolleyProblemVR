@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
@@ -11,6 +12,7 @@ public class GameStateManager : MonoBehaviour
     {
         ChangeState(new PauseState());
         playHandler = GetComponent<PlayHandler>();
+        DOTween.Init();
     }
 
     private void Update()

@@ -4,12 +4,7 @@ using UnityEngine;
 public class Chapter1Controller : ControllerBase, IPullable
 {
     [SerializeField] private Transform lever;
-
-    protected override void Start()
-    {
-        base.Start();
-    }
-
+    
     public void Pull(GameStateManager stateManager, PathController pathController)
     {
         if (pathController.pathSwitch == null) return;

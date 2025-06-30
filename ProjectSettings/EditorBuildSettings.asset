@@ -20,6 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter4.unity
     guid: 04bcfc21ade3e2d4ebff1745f5d3cdec
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene/Chapter1Tutorial.unity
+    guid: 657e05648bb22b34288155a5d03eed2d
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene/Chapter2Tutorial.unity
+    guid: 912fa56bc89e69344b0f9bb05e7085b0
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene/Chapter3Tutorial.unity
+    guid: 05f020f65e4ecb24cb9d4d3c5086c61f
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene/Chapter4Tutorial.unity
+    guid: 910144f8b9d425f47a7e41dc45f9f957
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 89c9519ec3fbd1444843c9ef9c5420df, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
